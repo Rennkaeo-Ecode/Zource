@@ -1,0 +1,6 @@
+-keep class com.renngamespace.** { *; }
+-keepclassmembers class com.renngamespace.** { *; }
+-keep class * extends android.app.Service { *; }
+-keep class * extends android.view.View { *; }
+-dontwarn org.xmlpull.v1.**
+-dontwarn com.google.errorprone.annotations.**

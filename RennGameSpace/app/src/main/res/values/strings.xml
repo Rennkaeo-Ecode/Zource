@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Renn Game Space</string>
+    <string name="home_tab">Beranda</string>
+    <string name="profile_tab">Profil</string>
+    <string name="game_launcher">Game Space Launcher</string>
+    <string name="game_library">Perpustakaan Game</string>
+    <string name="ax_mode">AX-MODE HUD</string>
+    <string name="touch_accelerator">Touch Accelerator (Pelicin Layar)</string>
+    <string name="sensitivity_lab">Sensitivity GameLab</string>
+    <string name="dpi_switcher">Smart Switch DPI</string>
+    <string name="cache_cleaner">Cache Cleaner</string>
+    <string name="crosshair">Advanced Crosshair</string>
+    <string name="gyroscope_calibration">Gyroscope Calibration</string>
+    <string name="fps_counter">FPS</string>
+    <string name="cpu_usage">CPU</string>
+    <string name="gpu_usage">GPU</string>
+    <string name="temperature">Temp</string>
+    <string name="start">Mulai</string>
+    <string name="stop">Berhenti</string>
+    <string name="reset_default">Reset Default</string>
+    <string name="manual_mode">Manual</string>
+    <string name="semi_auto">Semi-Otomatis</string>
+    <string name="notification_channel_overlay">AX-MODE Overlay</string>
+    <string name="notification_channel_overlay_desc">Persistent HUD overlay for game telemetry</string>
+    <string name="notification_channel_service">Game Detection Service</string>
+    <string name="notification_channel_service_desc">Background game launch monitoring</string>
+</resources>

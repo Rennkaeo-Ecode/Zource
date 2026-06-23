@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- SYSTEM_ALERT_WINDOW: AX-MODE continuous overlay HUD -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- WRITE_SECURE_SETTINGS: Protected fallback parameter adjustments -->
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"
+        android:maxSdkVersion="34"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- PACKAGE_USAGE_STATS: Real-time game tracking & launch interception -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- KILL_BACKGROUND_PROCESSES: Aggressive RAM cache flushing -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <!-- ACCESS_NOTIFICATION_POLICY: DND automated state flipping -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <!-- FOREGROUND_SERVICE: Persistent overlay infrastructure -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <!-- POST_NOTIFICATIONS: Android 13+ notification permission -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- QUERY_ALL_PACKAGES: Game library detection -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <!-- High-Framerate display support -->
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+
+    <application
+        android:name=".RennGameSpaceApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RennGameSpace"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:targetApi="35">
+
+        <!-- Main Dashboard Activity -->
+        <activity
+            android:name=".presentation.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.RennGameSpace"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- AX-MODE Persistent Overlay Foreground Service -->
+        <service
+            android:name=".service.AxModeOverlayService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            android:stopWithTask="false">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="continuous_overlay_hud_for_game_telemetry" />
+        </service>
+
+        <!-- Game Detection Monitoring Service -->
+        <service
+            android:name=".service.GameDetectionService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            android:stopWithTask="false">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="game_launch_detection_and_performance_management" />
+        </service>
+
+    </application>
+
+</manifest>

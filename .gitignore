@@ -1,0 +1,6 @@
+# Ignore generated Android signing files
+AXGC/debug.keystore
+AXGC/*-signed.apk
+
+# Keep the packaged APK archive if intentionally tracked
+#AXGC-APKs.zip

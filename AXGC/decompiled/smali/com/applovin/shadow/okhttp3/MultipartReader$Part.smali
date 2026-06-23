@@ -1,0 +1,103 @@
+.class public final Lcom/applovin/shadow/okhttp3/MultipartReader$Part;
+.super Ljava/lang/Object;
+.source "r8-map-id-b36b7ab65501c0aebcdae239443c16779ae9d0a519dfe4c1a2119cad994435c2"
+
+# interfaces
+.implements Ljava/io/Closeable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/applovin/shadow/okhttp3/MultipartReader;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Part"
+.end annotation
+
+
+# instance fields
+.field private final body:Lcom/applovin/shadow/okio/BufferedSource;
+
+.field private final headers:Lcom/applovin/shadow/okhttp3/Headers;
+
+
+# direct methods
+.method public constructor <init>(Lcom/applovin/shadow/okhttp3/Headers;Lcom/applovin/shadow/okio/BufferedSource;)V
+    .locals 1
+
+    .line 1
+    const-string v0, "headers"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lrd/k;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    const-string v0, "body"
+
+    .line 7
+    .line 8
+    invoke-static {p2, v0}, Lrd/k;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 12
+    .line 13
+    .line 14
+    iput-object p1, p0, Lcom/applovin/shadow/okhttp3/MultipartReader$Part;->headers:Lcom/applovin/shadow/okhttp3/Headers;
+
+    .line 15
+    .line 16
+    iput-object p2, p0, Lcom/applovin/shadow/okhttp3/MultipartReader$Part;->body:Lcom/applovin/shadow/okio/BufferedSource;
+
+    .line 17
+    .line 18
+    return-void
+.end method
+
+
+# virtual methods
+.method public final body()Lcom/applovin/shadow/okio/BufferedSource;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/applovin/shadow/okhttp3/MultipartReader$Part;->body:Lcom/applovin/shadow/okio/BufferedSource;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method
+
+.method public close()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/applovin/shadow/okhttp3/MultipartReader$Part;->body:Lcom/applovin/shadow/okio/BufferedSource;
+
+    .line 2
+    .line 3
+    invoke-interface {v0}, Lcom/applovin/shadow/okio/Source;->close()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public final headers()Lcom/applovin/shadow/okhttp3/Headers;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/applovin/shadow/okhttp3/MultipartReader$Part;->headers:Lcom/applovin/shadow/okhttp3/Headers;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method

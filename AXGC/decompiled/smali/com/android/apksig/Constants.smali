@@ -1,0 +1,51 @@
+.class public Lcom/android/apksig/Constants;
+.super Ljava/lang/Object;
+.source "r8-map-id-b36b7ab65501c0aebcdae239443c16779ae9d0a519dfe4c1a2119cad994435c2"
+
+
+# static fields
+.field public static final APK_SIGNATURE_SCHEME_V2_BLOCK_ID:I = 0x7109871a
+
+.field public static final APK_SIGNATURE_SCHEME_V31_BLOCK_ID:I = 0x1b93ad61
+
+.field public static final APK_SIGNATURE_SCHEME_V3_BLOCK_ID:I = -0xfac9740
+
+.field public static final LIBRARY_PAGE_ALIGNMENT_BYTES:S = 0x4000s
+
+.field public static final MANIFEST_ENTRY_NAME:Ljava/lang/String; = "META-INF/MANIFEST.MF"
+
+.field public static final MAX_APK_SIGNERS:I = 0xa
+
+.field public static final OID_RSA_ENCRYPTION:Ljava/lang/String; = "1.2.840.113549.1.1.1"
+
+.field public static final PROOF_OF_ROTATION_ATTR_ID:I = 0x3ba06f8c
+
+.field public static final V1_SOURCE_STAMP_BLOCK_ID:I = 0x2b09189e
+
+.field public static final V2_SOURCE_STAMP_BLOCK_ID:I = 0x6dff800d
+
+.field public static final VERSION_APK_SIGNATURE_SCHEME_V2:I = 0x2
+
+.field public static final VERSION_APK_SIGNATURE_SCHEME_V3:I = 0x3
+
+.field public static final VERSION_APK_SIGNATURE_SCHEME_V31:I = 0x1f
+
+.field public static final VERSION_APK_SIGNATURE_SCHEME_V4:I = 0x4
+
+.field public static final VERSION_JAR_SIGNATURE_SCHEME:I = 0x1
+
+.field public static final VERSION_SOURCE_STAMP:I
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method

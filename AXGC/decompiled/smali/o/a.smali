@@ -1,0 +1,58 @@
+.class public abstract Lo/a;
+.super Ljava/lang/Object;
+.source "r8-map-id-b36b7ab65501c0aebcdae239443c16779ae9d0a519dfe4c1a2119cad994435c2"
+
+
+# static fields
+.field public static final NAVIGATION_ABORTED:I = 0x4
+
+.field public static final NAVIGATION_FAILED:I = 0x3
+
+.field public static final NAVIGATION_FINISHED:I = 0x2
+
+.field public static final NAVIGATION_STARTED:I = 0x1
+
+.field public static final ONLINE_EXTRAS_KEY:Ljava/lang/String; = "online"
+
+.field public static final TAB_HIDDEN:I = 0x6
+
+.field public static final TAB_SHOWN:I = 0x5
+
+
+# virtual methods
+.method public extraCallback(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public extraCallbackWithResult(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 0
+
+    .line 1
+    const/4 p1, 0x0
+
+    .line 2
+    return-object p1
+.end method
+
+.method public onMessageChannelReady(Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public abstract onNavigationEvent(ILandroid/os/Bundle;)V
+.end method
+
+.method public onPostMessage(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public abstract onRelationshipValidationResult(ILandroid/net/Uri;ZLandroid/os/Bundle;)V
+.end method

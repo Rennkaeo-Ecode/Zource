@@ -1,0 +1,57 @@
+.class public final synthetic Lo8/r2;
+.super Ljava/lang/Object;
+.source "r8-map-id-b36b7ab65501c0aebcdae239443c16779ae9d0a519dfe4c1a2119cad994435c2"
+
+# interfaces
+.implements Ljava/util/function/Function;
+
+
+# static fields
+.field public static final synthetic a:Lo8/r2;
+
+
+# direct methods
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    new-instance v0, Lo8/r2;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    sput-object v0, Lo8/r2;->a:Lo8/r2;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    check-cast p1, Lo8/c4;
+
+    .line 2
+    .line 3
+    iget-wide v0, p1, Lo8/c4;->b:J
+
+    .line 4
+    .line 5
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p1
+
+    .line 9
+    return-object p1
+.end method
